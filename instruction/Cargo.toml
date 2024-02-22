@@ -1,0 +1,21 @@
+[package]
+name = "solana-instruction"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bincode = { workspace = true }
+borsh = { workspace = true, features = ["derive"] }
+num-traits = { workspace = true }
+serde = { workspace = true, features = ["derive"] }
+serde_derive = { workspace = true }
+solana-builtin-errors = { path = "../builtin-errors" }
+solana-layout-utils = { path = "../layout-utils" }
+solana-pubkey = { path = "../pubkey" }
+solana-sanitize = { path = "../sanitize" }
+thiserror = { workspace = true }
+wasm-bindgen = { workspace = true }
+
+[target.'cfg(not(target_os = "solana"))'.dependencies]
+solana-frozen-abi = { workspace = true }
+solana-frozen-abi-macro = { workspace = true }

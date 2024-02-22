@@ -1,0 +1,29 @@
+[package]
+name = "solana-pubkey"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+borsh = { workspace = true, features = ["derive", "unstable__schema"] }
+borsh0-10 = { package = "borsh", version = "0.10.3" }
+borsh0-9 = { package = "borsh", version = "0.9.3" }
+bs58 = { workspace = true }
+bytemuck = { workspace = true }
+num-derive = { workspace = true }
+num-traits = { workspace = true }
+serde = { workspace = true, features = ["derive"] }
+serde_derive = { workspace = true }
+solana-decode-error = { path = "../decode-error" }
+solana-frozen-abi = { workspace = true }
+solana-frozen-abi-macro = { workspace = true }
+solana-hash = { path = "../hash" }
+solana-sanitize = { path = "../sanitize" }
+thiserror = { workspace = true }
+wasm-bindgen = { workspace = true }
+
+[target.'cfg(not(target_os = "solana"))'.dependencies]
+curve25519-dalek = { workspace = true, features = ["serde"] }
+
+[dev-dependencies]
+arbitrary = { workspace = true, features = ["derive"] }
+rand = { workspace = true }

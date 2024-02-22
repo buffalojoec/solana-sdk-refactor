@@ -1,0 +1,16 @@
+[package]
+name = "solana-program-error"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+borsh = { workspace = true }
+num-traits = { workspace = true }
+serde = { workspace = true, features = ["derive"] }
+serde_derive = { workspace = true }
+solana-builtin-errors = { path = "../builtin-errors" }
+solana-decode-error = { path = "../decode-error" }
+solana-instruction = { path = "../instruction" }
+solana-program-stubs = { path = "../program-stubs" }
+solana-pubkey = { path = "../pubkey" }
+thiserror = { workspace = true }

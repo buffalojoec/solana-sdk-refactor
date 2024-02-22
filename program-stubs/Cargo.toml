@@ -1,0 +1,13 @@
+[package]
+name = "solana-program-stubs"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+base64 = { workspace = true }
+itertools = { workspace = true }
+lazy_static = { workspace = true }
+num-traits = { workspace = true }
+solana-builtin-errors = { path = "../builtin-errors" }
+solana-instruction = { path = "../instruction" }
+solana-pubkey = { path = "../pubkey" }
